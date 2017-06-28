@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.thejan.smarthome.ACModeSelectionActivity">
+
+    <Button
+        android:id="@+id/btnSelectLearningMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learning Mode"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="96dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="131dp" />
+
+    <Button
+        android:id="@+id/btnSelectControllingMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Controlling Mode"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="210dp"
+        android:layout_below="@+id/btnSelectLearningMode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="105dp" />
+</RelativeLayout>

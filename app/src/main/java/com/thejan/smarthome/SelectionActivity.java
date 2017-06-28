@@ -35,7 +35,7 @@ public class SelectionActivity extends AppCompatActivity {
         buttonAC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SelectionActivity.this, ACControlActivity.class);
+                Intent intent=new Intent(SelectionActivity.this, ACModeSelectionActivity.class);
                 //IP is to be hardcoded. If not more activity to take IP.
                 intent.putExtra("AC_IP","192.168.8.101");
                 startActivity(intent);

@@ -29,6 +29,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".ACModeSelectionActivity" />
+        <activity android:name=".ACLearningActivity"></activity>
     </application>
 
 </manifest>
