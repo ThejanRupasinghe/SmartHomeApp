@@ -25,7 +25,7 @@ public class SelectionActivity extends AppCompatActivity {
         buttonBulb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent("com.thejan.smarthome.BulbControlActivity");
+                Intent intent=new Intent(SelectionActivity.this, BulbControlActivity.class);
                 //IP is to be hardcoded. If not more activity to take IP.
                 intent.putExtra("Bulb_IP","192.168.8.100");
                 startActivity(intent);
@@ -35,7 +35,7 @@ public class SelectionActivity extends AppCompatActivity {
         buttonAC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent("com.thejan.smarthome.ACControlActivity");
+                Intent intent=new Intent(SelectionActivity.this, ACControlActivity.class);
                 //IP is to be hardcoded. If not more activity to take IP.
                 intent.putExtra("AC_IP","192.168.8.101");
                 startActivity(intent);
