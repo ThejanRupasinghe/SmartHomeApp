@@ -11,57 +11,53 @@
     tools:context="com.thejan.smarthome.ACControlActivity">
 
     <TextView
-        android:text="AC ON / AC OFF"
+        android:id="@+id/textView_acStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="49dp"
-        android:id="@+id/textView2"
-        android:textSize="18sp"
-        android:textColor="@android:color/holo_green_dark" />
+        android:layout_marginTop="11dp"
+        android:text="A/C OFF"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="36sp" />
 
     <Button
-        android:text="ON"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="42dp"
-        android:id="@+id/button_ac_on"
-        android:layout_alignRight="@+id/button_ac_off"
-        android:layout_alignEnd="@+id/button_ac_off" />
-
-    <Button
-        android:text="OFF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_ac_on"
-        android:layout_marginTop="26dp"
-        android:id="@+id/button_ac_off"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2" />
-
-    <Button
-        android:text="TEMP UP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
         android:id="@+id/button_ac_temp_up"
-        android:layout_below="@+id/button_ac_off"
-        android:layout_alignLeft="@+id/button_ac_off"
-        android:layout_alignStart="@+id/button_ac_off"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2" />
-
-    <Button
-        android:text="TEMP DOWN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_alignLeft="@+id/toggleButton"
+        android:layout_alignStart="@+id/toggleButton"
+        android:layout_below="@+id/toggleButton"
+        android:layout_marginTop="26dp"
+        android:width="200dp"
+        android:height="75dp"
+        android:text="TEMP UP"
+        android:textSize="18sp" />
+
+    <Button
         android:id="@+id/button_ac_temp_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:width="200dp"
+        android:height="75dp"
+        android:text="TEMP DOWN"
+        android:textSize="18sp"
         android:layout_below="@+id/button_ac_temp_up"
         android:layout_alignLeft="@+id/button_ac_temp_up"
-        android:layout_alignStart="@+id/button_ac_temp_up"
-        android:layout_alignRight="@+id/button_ac_temp_up"
-        android:layout_alignEnd="@+id/button_ac_temp_up" />
+        android:layout_alignStart="@+id/button_ac_temp_up" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_acStatus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:width="200dp"
+        android:height="100dp"
+        android:text="ToggleButton"
+        android:textOff="OFF"
+        android:textOn="ON"
+        android:textSize="24sp" />
 </RelativeLayout>

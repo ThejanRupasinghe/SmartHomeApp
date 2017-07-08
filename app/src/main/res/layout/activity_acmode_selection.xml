@@ -4,27 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.thejan.smarthome.ACModeSelectionActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dip"
+        android:weightSum="1">
 
     <Button
         android:id="@+id/btnSelectLearningMode"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_weight="0.39"
         android:text="Learning Mode"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="96dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="131dp" />
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/btnSelectControllingMode"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_weight="0.39"
         android:text="Controlling Mode"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="210dp"
-        android:layout_below="@+id/btnSelectLearningMode"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="105dp" />
+        android:textSize="24sp" />
+
+    </LinearLayout>
 </RelativeLayout>

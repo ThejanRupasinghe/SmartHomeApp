@@ -14,19 +14,24 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dip">
+        android:layout_marginTop="50dip"
+        android:weightSum="1">
 
         <Button
-            android:text="Bulb Control"
+            android:id="@+id/button_bulb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dip"
-            android:id="@+id/button_bulb" />
+            android:layout_weight="0.39"
+            android:text="Bulb Control"
+            android:textSize="24sp" />
 
         <Button
-            android:text="A/C Control"
+            android:id="@+id/button_ac"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button_ac" />
+            android:layout_weight="0.39"
+            android:text="A/C Control"
+            android:textSize="24sp" />
     </LinearLayout>
 </RelativeLayout>
