@@ -10,33 +10,27 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.thejan.smarthome.BulbControlActivity">
 
-    <Button
-        android:text="ON"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
-        android:id="@+id/button"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="OFF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="51dp"
-        android:id="@+id/button_bulb_off"
-        android:layout_below="@+id/button"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
-
     <TextView
-        android:text="Bulb ON / Bulb OFF"
+        android:id="@+id/textView_bulbStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_above="@+id/toggleButton_bulb"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:id="@+id/textView"
-        android:textSize="24sp"
-        android:textColor="@android:color/holo_green_light" />
+        android:layout_marginBottom="47dp"
+        android:text="Bulb OFF"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="36sp" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton_bulb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:width="200dp"
+        android:height="200dp"
+        android:text="ToggleButton"
+        android:textOff="OFF"
+        android:textOn="ON"
+        android:textSize="36sp" />
 </RelativeLayout>
