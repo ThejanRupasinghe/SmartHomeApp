@@ -20,7 +20,7 @@ public class BulbControlActivity extends AppCompatActivity {
     MyRequest myRequest;
 
     // STATIC IP OF THE BULB
-    private String bulbIP = "192.168.43.76";
+    private static String bulbIP = "192.168.43.76";
 
     private static String url_base;
 
@@ -29,10 +29,10 @@ public class BulbControlActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bulb_control);
 
+        toggleButtonListener();
+
         queue= Volley.newRequestQueue(this);
         myRequest=new MyRequest();
-
-        toggleButtonListener();
     }
 
     public void toggleButtonListener(){
@@ -50,7 +50,7 @@ public class BulbControlActivity extends AppCompatActivity {
 
                     String url = url_base + "/BULB=ON";
 
-                    if(myRequest.HttpRequest(queue, url) == null){
+                    if(myRequest.HttpRequest(queue, url) != null){
                         Toast.makeText(BulbControlActivity.this, "Bulb On", Toast.LENGTH_SHORT).show();
                         textViewStatus.setTextColor(Color.parseColor("#ff99cc00"));
                         textViewStatus.setText("Bulb ON");
@@ -62,7 +62,7 @@ public class BulbControlActivity extends AppCompatActivity {
 
                     String url = url_base + "/BULB=OFF";
 
-                    if(myRequest.HttpRequest(queue, url) == null){
+                    if(myRequest.HttpRequest(queue, url) != null){
                         Toast.makeText(BulbControlActivity.this, "Bulb Off", Toast.LENGTH_SHORT).show();
                         textViewStatus.setTextColor(Color.parseColor("#ffff4444"));
                         textViewStatus.setText("Bulb OFF");

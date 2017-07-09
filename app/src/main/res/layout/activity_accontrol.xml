@@ -25,9 +25,9 @@
         android:id="@+id/button_ac_temp_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/toggleButton"
-        android:layout_alignStart="@+id/toggleButton"
-        android:layout_below="@+id/toggleButton"
+        android:layout_alignLeft="@+id/toggleButton_ac"
+        android:layout_alignStart="@+id/toggleButton_ac"
+        android:layout_below="@+id/toggleButton_ac"
         android:layout_marginTop="26dp"
         android:width="200dp"
         android:height="75dp"
@@ -48,7 +48,7 @@
         android:layout_alignStart="@+id/button_ac_temp_up" />
 
     <ToggleButton
-        android:id="@+id/toggleButton"
+        android:id="@+id/toggleButton_ac"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView_acStatus"
