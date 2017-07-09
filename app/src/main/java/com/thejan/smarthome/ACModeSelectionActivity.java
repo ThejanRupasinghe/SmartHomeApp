@@ -18,7 +18,7 @@ public class ACModeSelectionActivity extends AppCompatActivity {
     MyRequest myRequest;
 
     // STATIC IP OF THE AC
-    private String acIP = "192.168.43.76";
+    private String acIP = "192.168.43.74";
 
     private static String url_base;
 

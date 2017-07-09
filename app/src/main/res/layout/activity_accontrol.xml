@@ -57,7 +57,7 @@
         android:width="200dp"
         android:height="100dp"
         android:text="ToggleButton"
-        android:textOff="OFF"
-        android:textOn="ON"
+        android:textOff="ON"
+        android:textOn="OFF"
         android:textSize="24sp" />
 </RelativeLayout>
