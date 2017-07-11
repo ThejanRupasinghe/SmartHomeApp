@@ -3,7 +3,19 @@
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries
+/.idea/misc.xml
+/.idea/gradle.xml
 .DS_Store
 /build
 /captures
 .externalNativeBuild
+
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+
