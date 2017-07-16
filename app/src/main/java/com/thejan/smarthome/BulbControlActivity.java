@@ -19,9 +19,6 @@ public class BulbControlActivity extends AppCompatActivity {
     RequestQueue queue;
     MyRequest myRequest;
 
-    // STATIC IP OF THE BULB
-    private static String bulbIP = "192.168.43.76";
-
     private static String url_base;
 
     @Override
@@ -40,7 +37,7 @@ public class BulbControlActivity extends AppCompatActivity {
         toggleButtonBulb = (ToggleButton) findViewById(R.id.toggleButton_bulb);
         textViewStatus = (TextView) findViewById(R.id.textView_bulbStatus);
 
-        url_base = "http://" + bulbIP;
+        url_base = "http://" + getString(R.string.bulbIP);
 
         toggleButtonBulb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

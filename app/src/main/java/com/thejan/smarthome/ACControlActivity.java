@@ -1,8 +1,10 @@
 package com.thejan.smarthome;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.TextView;
@@ -21,9 +23,6 @@ public class ACControlActivity extends AppCompatActivity {
 
     RequestQueue queue;
     MyRequest myRequest;
-
-    // STATIC IP OF THE AC
-    private String acIP = "192.168.43.74";
 
     private static String url_base;
 
@@ -45,7 +44,33 @@ public class ACControlActivity extends AppCompatActivity {
         buttonACTempDown = (Button) findViewById(R.id.button_ac_temp_down);
         textViewACStatus = (TextView) findViewById(R.id.textView_acStatus);
 
-        url_base = "http://" + acIP;
+        url_base = "http://" + getString(R.string.acIP);
+
+        buttonACTempUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = url_base + "/DO_TEMPUP";
+
+                if(myRequest.HttpRequest(queue, url) != null){
+                    Toast.makeText(ACControlActivity.this, "A/C TEMP UP", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(ACControlActivity.this, "error", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        buttonACTempDown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = url_base + "/DO_TEMPDOWN";
+
+                if(myRequest.HttpRequest(queue, url) != null){
+                    Toast.makeText(ACControlActivity.this, "A/C TEMP UP", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(ACControlActivity.this, "error", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         toggleButtonAC.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -53,7 +78,7 @@ public class ACControlActivity extends AppCompatActivity {
 
                 if(isChecked){
 
-                    String url = url_base + "/AC=ON";
+                    String url = url_base + "/DO_ONOFF";
 
                     if(myRequest.HttpRequest(queue, url) != null){
                         Toast.makeText(ACControlActivity.this, "A/C On", Toast.LENGTH_SHORT).show();
@@ -65,7 +90,7 @@ public class ACControlActivity extends AppCompatActivity {
 
                 } else {
 
-                    String url = url_base + "/AC=OFF";
+                    String url = url_base + "/DO_ONOFF";
 
                     if(myRequest.HttpRequest(queue, url) != null){
                         Toast.makeText(ACControlActivity.this, "A/C Off", Toast.LENGTH_SHORT).show();

@@ -17,9 +17,6 @@ public class ACModeSelectionActivity extends AppCompatActivity {
     RequestQueue queue;
     MyRequest myRequest;
 
-    // STATIC IP OF THE AC
-    private String acIP = "192.168.43.74";
-
     private static String url_base;
 
     @Override
@@ -38,13 +35,13 @@ public class ACModeSelectionActivity extends AppCompatActivity {
         btnSelectLearningMode = (Button) findViewById(R.id.btnSelectLearningMode);
         btnSelectControllingMode = (Button) findViewById(R.id.btnSelectControllingMode);
 
-        url_base = "http://" + acIP;
+        url_base = "http://" + getString(R.string.acIP);
 
         btnSelectControllingMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                String url = url_base + "/CONTROL=ON";
+                String url = url_base + "/CONTROL_ON";
 
                 if(myRequest.HttpRequest(queue, url) != null){
                     Toast.makeText(ACModeSelectionActivity.this, "Controlling Mode On", Toast.LENGTH_SHORT).show();
@@ -63,7 +60,7 @@ public class ACModeSelectionActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String url = url_base + "/LEARN=ON";
+                String url = url_base + "/LEARN_ON";
 
                 if(myRequest.HttpRequest(queue, url) != null){
                     Toast.makeText(ACModeSelectionActivity.this, "Learning Mode On", Toast.LENGTH_SHORT).show();

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SmartHome</string>
+    <string name="bulbIP">192.168.43.76</string>
+    <string name="acIP">192.168.43.244</string>
 </resources>

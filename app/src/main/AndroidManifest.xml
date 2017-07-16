@@ -31,8 +31,27 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ACModeSelectionActivity" />
-        <activity android:name=".ACLearningActivity"></activity>
+        <activity android:name=".ACModeSelectionActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.ACModeSelectionActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ACLearningActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.ACLearningActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SavingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SavingActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
